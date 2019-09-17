@@ -1,0 +1,22 @@
+create or replace procedure delete_laptop_set_null
+     (
+    	lid laptop.code%type
+     )
+     is
+     begin
+     update employee set laptop_code = null where laptop_code=vid;
+     delete from laptop where code = lid;     
+end;
+
+------------------------------------------------------------------------------------------
+
+create or replace procedure delete_vehicle_set_null
+     (
+    	vid vehicle.vehicle_id%type
+     )
+     is
+     begin
+     update employee set vehicle_vehicle_id = null where vehicle_vehicle_id=vid;
+     delete from vehicle where vehicle_id = vid;     
+end;
+------------------------------------------------------------------------------------------
